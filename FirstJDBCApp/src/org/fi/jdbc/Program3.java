@@ -24,8 +24,7 @@ public class Program3 {
 				System.out.println("Enter the name");
 				String name = scr.nextLine();
 				System.out.println("Enter the email");
-				String email =  scr.nextLine();
-				
+				String email = scr.nextLine();
 				
 				String sqlInsertUser = "insert into users_0029 values('"+userName+"','"+password+"','"+name+"','"+email+"')";
 				System.out.println(sqlInsertUser);
