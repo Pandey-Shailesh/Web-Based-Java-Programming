@@ -1,8 +1,3 @@
 INDEX VERSION 1.131+D:\Github\Web-Based-Java-Programming\.metadata\.plugins\org.eclipse.jdt.core
-730056033.index
-3505677630.index
-951364754.index
-1392768284.index
-2607586589.index
-2856924912.index
 1865797976.index
+3075601910.index
