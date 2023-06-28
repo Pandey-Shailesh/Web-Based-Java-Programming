@@ -18,7 +18,7 @@ import java.sql.SQLException;
 
 @WebServlet("/Category")
 public class Category extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	
 	Connection connection;
 	PreparedStatement psCategory;
 
@@ -42,7 +42,7 @@ public class Category extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
-
+@Override
 	public void destroy() {
 		try {
 			if (psCategory != null) {
@@ -52,7 +52,7 @@ public class Category extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
-
+@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -81,8 +81,7 @@ public class Category extends HttpServlet {
 				while (result.next()) {
 
 					out.println("<tr>");
-					out.println("<td><a herf='Products?categoryId=" + result.getInt("categoryId") + "'>"
-							+ result.getString("categoryName") + "</a></td>");
+					out.println("<td>"+"<a href='Products?categoryId=" + result.getInt("categoryId") + "'><b>"+ result.getString("categoryName") + "</b></a></td>");
 					out.println("<td>" + result.getString("categoryDescription") + "</td>");
 					out.println("<td><img src='Images/" + result.getString("categoryImageUrl")
 							+ "' height='60px' width='60px'/></td>");

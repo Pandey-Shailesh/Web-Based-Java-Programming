@@ -25,12 +25,11 @@ public class ShoppingCart implements Cart {
 		}
 	}
 	public Iterator<Product> allItems(){
-		if (items.isEmpty()) {
+		if (items.isEmpty()) 
 			return null;
-		}
-		else {
+		else 
 			return items.iterator();
-		}
+		
 	}
 
 }

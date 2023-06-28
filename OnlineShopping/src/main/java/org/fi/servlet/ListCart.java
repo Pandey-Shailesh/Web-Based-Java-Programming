@@ -1,6 +1,5 @@
 package org.fi.servlet;
 
-import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -8,10 +7,12 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
+import org.fi.cart.Cart;
 import org.fi.pojo.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 @WebServlet("/Listcart")
 public class ListCart extends HttpServlet {
@@ -31,10 +32,11 @@ public class ListCart extends HttpServlet {
 		out.println("<body>");
 		out.println("Welcome <b>"+session.getAttribute("userName")+"</b><br/>");
 		
-		ArrayList<Product> objCart = (ArrayList<Product>)session.getAttribute("cart");
+		Cart objCart = (Cart)session.getAttribute("cart");
 		
 		if (objCart==null) {
 			out.println("<h3>Your cart is empty</h3>");
+			return;
 		}
 	
 		
@@ -47,10 +49,11 @@ public class ListCart extends HttpServlet {
 		out.println("</tr>");
 		
 		double total=0.0;
+		Iterator<Product> item=objCart.allItems();
 		
-	for (Product objProduct : objCart) {
+	while(item.hasNext()) {
 		
-		
+		Product objProduct= item.next();
 		out.println("<tr>");
 		out.println("<td>" +objProduct.getCategoryId() +"</td>");
 		out.println("<td>" +objProduct.getProductId() +"</td>");

@@ -17,11 +17,17 @@
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebInitParam"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.ServletContext"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.fi.servlet.ShoppingCart"/>
     <fullyQualifiedTypeName name="org.fi.pojo.Product"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.ServletContext"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Constructor"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="org.fi.cart.Cart"/>
+    <fullyQualifiedTypeName name="org.fi.cart.ShoppingCart"/>
+    <fullyQualifiedTypeName name="firstjsp.pojo.Product"/>
 </qualifiedTypeNameHistroy>

@@ -1,12 +1,11 @@
 package org.fi.cart;
 
 import java.util.Iterator;
-
-import org.fi.servlet.Product;
+import org.fi.pojo.Product;
 
 public interface Cart {
 public void addToCart(Product objProduct);
-public void seleteFromCart(int categoryId,int productId);
+public void deleteFromCart(int categoryId,int productId);
 public Iterator<Product> allItems();
 
 }
