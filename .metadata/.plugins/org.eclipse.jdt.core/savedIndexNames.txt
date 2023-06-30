@@ -1,24 +1,4 @@
 INDEX VERSION 1.134+D:\Github\Web-Based-Java-Programming\.metadata\.plugins\org.eclipse.jdt.core
-3289022729.index
-139035433.index
-2676108584.index
-2986716872.index
-98261199.index
-1856306614.index
-2239648537.index
-2577221020.index
-605491526.index
-551720270.index
-3533139671.index
-358079200.index
+863874784.index
+2854596601.index
 1865797976.index
-512837733.index
-1360608704.index
-3104124654.index
-763691196.index
-1795912314.index
-1484086209.index
-4274641710.index
-4008922536.index
-2953269947.index
-1549491511.index

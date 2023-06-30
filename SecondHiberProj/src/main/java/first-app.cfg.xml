@@ -21,7 +21,8 @@
 		
 		<mapping class="org.fi.hibernate.secondapp.entity.Users"/>
 		<mapping class="org.fi.hibernate.secondapp.entity.Category"/>
-			<mapping class="org.fi.hibernate.secondapp.entity.Card"/>
+		<mapping class="org.fi.hibernate.secondapp.entity.Card"/>
+		<mapping class="org.fi.hibernate.secondapp.entity.Products"/>
 	</session-factory>
 	
 	
