@@ -20,6 +20,7 @@
 		<property name="format_sql">true</property>
 		
 		<mapping class="webhibernate.entity.Users"/>
+		<mapping class="webhibernate.entity.Category"/>
 	</session-factory>
 	
 	
