@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -32,9 +33,23 @@ public boolean deleteContact(@PathVariable("cid")int contactId) {
 public Iterator<ContactDTO> getPage(@PathVariable("pageNo")int pageNo,@PathVariable("size")int size) {
 	return contactService.pageData(pageNo, size);
 }
+@GetMapping("/findById/{cid}")
+public ContactDTO findByContactId(@PathVariable("cid")int contactId) {
+	return contactService.getContactByID(contactId);
+}
 
-
-
+@GetMapping("/findByFirstName")
+public ContactDTO findByContactFirstName(@RequestParam("fname")String firstName) {
+	return contactService.getContactByFirstName(firstName);
+}
+@GetMapping("/findByLastName")
+public ContactDTO findByContactLasttName(@RequestParam("lname")String lastName) {
+	return contactService.getContactByLastName(lastName);
+}
+@GetMapping("/allContactByDomain")
+public Iterator<ContactDTO> findByContactEmailDomain(@RequestParam("email")String emailDomain) {
+	return contactService.getContactByEmailDomain(emailDomain);
+}
 
 
 }
