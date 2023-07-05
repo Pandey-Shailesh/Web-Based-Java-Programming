@@ -5,6 +5,7 @@ import java.util.Iterator;
 import org.fi.boot.jpabootapp.dto.ContactDTO;
 import org.fi.boot.jpabootapp.services.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +28,10 @@ public Iterator<ContactDTO> getAllContacts() {
 public boolean deleteContact(@PathVariable("cid")int contactId) {
 	return contactService.deleteContact(contactId);
 }
-
+@GetMapping("/contacts/{pageNo}/{size}")
+public Iterator<ContactDTO> getPage(@PathVariable("pageNo")int pageNo,@PathVariable("size")int size) {
+	return contactService.pageData(pageNo, size);
+}
 
 
 

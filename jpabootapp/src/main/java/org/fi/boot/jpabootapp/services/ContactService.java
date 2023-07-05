@@ -8,4 +8,5 @@ public interface ContactService {
 public boolean addContact(ContactDTO contactDTO);
 public boolean deleteContact(int contactId);
 public Iterator<ContactDTO> getAllContacts();
+public Iterator<ContactDTO> pageData(int pageNo,int size);
 }
